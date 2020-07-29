@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+
+.container{
+  background-color: #f8f8f8;
+    
+}
+
+.title{
+	position: relative;
+  margin-bottom: 100px;
+  text-align: center;
+}
+.title:after{
+	content: '';
+	height: 5px;
+	width: 40px;
+	background-color: #62aa94;
+	position: absolute;
+	top: 81px;
+  left: calc(50% - 20px);
+  text-align: center;
+}
+
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.row{
+  text-align:center;
+}
+  
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}

@@ -1,0 +1,14 @@
+<div id="services" class="container">
+    <div class="row">
+        <h2 class="title"> <i>Sniegtie pakalpojumi</i></h2>
+        <ul>
+            <li class = "horizontal" *ngFor="let service of column">
+                <h2><i>{{service.title}}</i></h2>
+                <div class="description" rows="4" cols="50">
+                    <i>{{service.description}}</i><br>
+                </div>
+                
+            </li>
+        </ul>
+    </div>
+</div>

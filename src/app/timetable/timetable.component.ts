@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClientModule }    from '@angular/common/http';
-
+import { Component, OnInit, Input } from '@angular/core';
+import { Observable } from 'rxjs';
+import { TimeService } from '../restService/time.service';
 @Component({
   selector: 'app-timetable',
   templateUrl: './timetable.component.html',
@@ -8,7 +8,13 @@ import { HttpClientModule }    from '@angular/common/http';
 })
 export class TimetableComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  result$: Observable<any>;
+
+  constructor(private timeService: TimeService) {
+    this.result$ = timeService.resolveItems();
+  }
+
 
   ngOnInit(): void {
   }

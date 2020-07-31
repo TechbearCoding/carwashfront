@@ -15,6 +15,7 @@ import { PartnersComponent } from './partners/partners.component';
 import { SendmessComponent } from './sendmess/sendmess.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,11 +31,12 @@ import { FooterComponent } from './footer/footer.component';
     PartnersComponent,
     SendmessComponent,
     ContactsComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

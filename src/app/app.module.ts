@@ -11,8 +11,6 @@ import { ServiceInfoComponent } from './service-info/service-info.component';
 import { PricesComponent } from './prices/prices.component';
 import { TimetableComponent } from './timetable/timetable.component';
 import { JobsDoneComponent } from './jobs-done/jobs-done.component';
-import { PartnersComponent } from './partners/partners.component';
-import { SendmessComponent } from './sendmess/sendmess.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -28,8 +26,6 @@ import { HttpClientModule } from '@angular/common/http';
     PricesComponent,
     TimetableComponent,
     JobsDoneComponent,
-    PartnersComponent,
-    SendmessComponent,
     ContactsComponent,
     FooterComponent,
   ],

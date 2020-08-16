@@ -1,1 +1,36 @@
 <p>{{(result$|async)|json}} </p>
+
+<div id="prices" class="container">
+    <h2 class="title"> <i>Cenas</i></h2>
+    <table>
+        <tr>
+            <th *ngFor="let obj of result$ | async">{{obj.day}}</th>
+        </tr>
+        <tr>
+            <th *ngFor="let obj of result$ | async">{{obj.hours}}</th>
+        </tr>
+    </table>
+</div>
+<!-- <div id="prices" class="container">
+    <h2 class="title"> <i>Cenas</i></h2>
+    <table>
+        <tr>
+            <th>Pirmdiena</th>
+            <th>Otrdiena</th>
+            <th>Trešdiena</th>
+            <th>Ceturtdiena</th>
+            <th>Piektdiena</th>
+            <th>Sestdiena </th>
+            <th>Svētdiena</th>
+        </tr>
+        <tr>
+            <th>10:00-18:00</th>
+            <th>10:00-18:00</th>
+            <th>10:00-18:00</th>
+            <th>10:00-18:00</th>
+            <th>10:00-18:00</th>
+            <th>11:00-18:00</th>
+            <th>11:00-18:00</th>
+        </tr>
+    </table>
+</div> -->

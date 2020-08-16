@@ -1,1 +1,11 @@
-<p>timetable works!</p>
+<div id="prices" class="container">
+    <h2 class="title"> <i>Cenas</i></h2>
+    <table>
+        <tr>
+            <th *ngFor="let obj of result$ | async">{{obj.day}}</th>
+        </tr>
+        <tr>
+            <th *ngFor="let obj of result$ | async">{{obj.hours}}</th>
+        </tr>
+    </table>
+</div>

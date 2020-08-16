@@ -1,14 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 .container{
-  background-color: #f8f8f8;
+  	background-color: #f8f8f8;
     
 }
 
 .title{
 	position: relative;
-  margin-bottom: 100px;
-  text-align: center;
+	margin-bottom: 100px;
+	text-align: center;
 }
 .title:after{
 	content: '';
@@ -17,8 +17,8 @@
 	background-color: #62aa94;
 	position: absolute;
 	top: 81px;
-  left: calc(50% - 20px);
-  text-align: center;
+	left: calc(50% - 20px);
+	text-align: center;
 }
 
 
@@ -29,13 +29,13 @@
 }
 
 .row{
-  text-align:center;
+  	text-align:center;
 }
   
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 table {

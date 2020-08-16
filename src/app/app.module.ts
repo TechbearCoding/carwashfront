@@ -14,6 +14,7 @@ import { JobsDoneComponent } from './jobs-done/jobs-done.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SubmitComponent } from './submit/submit.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +23,13 @@ import { HttpClientModule } from '@angular/common/http';
     MainComponent,
     AboutComponent,
     ServicesComponent,
-    ServiceInfoComponent,
+    ServiceInfoComponent, 
     PricesComponent,
     TimetableComponent,
     JobsDoneComponent,
     ContactsComponent,
     FooterComponent,
+    SubmitComponent,
   ],
   imports: [
     BrowserModule,

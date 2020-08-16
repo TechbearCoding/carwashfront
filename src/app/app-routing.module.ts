@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { SubmitComponent } from './submit/submit.component';
-import { AppComponent } from './app.component';
+import { MainComponent } from './main/main.component';
 
 
 const routes: Routes = [
   {
     path:'',
-    component: AppComponent
+    component: MainComponent
   },
 
   {

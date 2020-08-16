@@ -15,6 +15,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SubmitComponent } from './submit/submit.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { SubmitComponent } from './submit/submit.component';
     ContactsComponent,
     FooterComponent,
     SubmitComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

@@ -15,11 +15,10 @@ export class SubmitComponent implements OnInit {
   submitted = false;
 
   private jsonString : String;
-
-
-  constructor(private formService: FormRestService, private formBuilder: FormBuilder) {
-    //formService.postItems(this.);
-
+  private postService: FormRestService
+  
+  constructor(formService: FormRestService, private formBuilder: FormBuilder) {
+    this.postService = formService;
   }
 
   ngOnInit(): void {
@@ -53,7 +52,7 @@ export class SubmitComponent implements OnInit {
 
     let serializedForm = JSON.stringify(formObj);
 
-    alert(serializedForm);
+    this.postService.postItems(serializedForm);
   }
 
 

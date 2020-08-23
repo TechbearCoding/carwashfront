@@ -1,37 +1,73 @@
 <form [formGroup]="submitForm" (ngSubmit)="submitData();" >
     <h1>Kontaktinformācija</h1>
     <label for="fname">Vārds:</label><br>
-    <input required type="text" formControlName="fname"><br>
+
+    <input required type="text" formControlName="fname" 
+    [ngClass]="{ 'is-invalid': submitted && fval.fname.errors }"><br>
+
+    <div *ngIf="submitted && fval.fname.errors" class="invalid-feedback">
+        <div *ngIf="fval.fname.errors.required">
+        Jāievada vārds!
+        </div>
+    </div>
     <br>
 
     <label for="lname">Uzvārds:</label><br>
-    <input required type="text" formControlName="lname"><br>
+    <input type="text" formControlName="lname" 
+    [ngClass]="{ 'is-invalid': submitted && fval.lname.errors }"><br>
+
+    <div *ngIf="submitted && fval.lname.errors" class="invalid-feedback">
+        <div *ngIf="fval.lname.errors.required">
+        Jāievada uzvārds!
+        </div>
+    </div>
     <br>
 
     <label for="phone">Telefona numurs:</label><br>
-    <input required type="text" formControlName="phone"><br>
+    <input required type="text" formControlName="phone" 
+    [ngClass]="{ 'is-invalid': submitted && fval.phone.errors }"><br>
+
+    <div *ngIf="submitted && fval.phone.errors" class="invalid-feedback">
+        <div *ngIf="fval.phone.errors.required">
+        Jāievada telefona nr!
+        </div>
+    </div>
     <br>
 
     <label for="email">E-pasts</label><br>
-    <input required type="text" formControlName="email"><br>
+    <input required type="text" formControlName="email"
+    [ngClass]="{ 'is-invalid': submitted && fval.email.errors }"><br>
+
+    <div *ngIf="submitted && fval.email.errors" class="invalid-feedback">
+        <div *ngIf="fval.email.errors.required">
+        Jāievada e-pasts pareizajā formā!
+        </div>
+    </div>
     <br>
 
     <h1>Par auto</h1>
     <label for="model">Auto modelis:</label><br>
-    <input required type="text" formControlName="model"><br>
+    <input required type="text" formControlName="model"
+    [ngClass]="{ 'is-invalid': submitted && fval.model.errors }">><br>
+
+    <div *ngIf="submitted && fval.model.errors" class="invalid-feedback">
+        <div *ngIf="fval.model.errors.required">
+        Jāievada auto modelis!
+        </div>
+    </div>
     <br>
 
     <label for="service">Pakalpojuma tips:</label><br>
-    <select formControlName="service" >
-        <option value="Automazgāšana">Automazgāšana</option>
+    <select name = "service" formControlName="service" >
+        <option value="Automazgāšana" selected>Automazgāšana</option>
         <option value="Salona ķīmiskā'tīrīsana">Salona ķīmiskā'tīrīsana</option>
         <option value="Konsultācija">Konsultācija</option>
     </select><br>
     <br>
 
     <label for="quality">Pakalpojuma tips:</label><br>
-    <select formControlName="quality"><br>
-        <option value="Zelta">Zelta</option>
+    <select name = "quality" formControlName="quality"><br>
+        <option value="Zelta" selected>Zelta</option>
         <option value="Sudraba">Sudraba</option>
         <option value="Bronzas">Bronzas</option>
     </select><br>

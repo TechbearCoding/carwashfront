@@ -27,16 +27,28 @@ export class SubmitComponent implements OnInit {
     this.submitForm = this.formBuilder.group({
       fname: ['', Validators.required],
       lname: ['', Validators.required],
-      phone: ['', [Validators.required,Validators.email]],
-      email: ['', Validators.required],
+      email: ['', [Validators.required,Validators.email]],
+      phone: ['', Validators.required],
       model: ['', Validators.required],
-      service: ['', Validators.required],
-      quality: ['', Validators.required],
+      service: ['Automazgāšana', Validators.required],
+      quality: ['Zelta', Validators.required],
       comments: ['']
     });
+    
+  }
+
+  get fval() {
+    return this.submitForm.controls;
   }
 
   submitData(){
+    this.submitted = true;
+
+    if (this.submitForm.invalid) {
+      alert("Forma nav pareizi aizpildīta!");
+      return;
+    }
+  
     let formObj = this.submitForm.getRawValue(); // {name: '', description: ''}
 
     let serializedForm = JSON.stringify(formObj);
@@ -44,8 +56,5 @@ export class SubmitComponent implements OnInit {
     alert(serializedForm);
   }
 
-  get fval() {
-    return this.submitForm.controls;
-  }
 
 }

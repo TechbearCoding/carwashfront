@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { SubmitComponent } from './submit/submit.component';
 import { MainComponent } from './main/main.component';
+import { LoginComponent} from './login/login.component'
 
 
 const routes: Routes = [
@@ -14,6 +15,11 @@ const routes: Routes = [
   {
     path: 'submit',
     component: SubmitComponent
+  },
+
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 

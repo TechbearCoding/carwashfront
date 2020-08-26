@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SubmitComponent } from './submit/submit.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     SubmitComponent,
     HeaderComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

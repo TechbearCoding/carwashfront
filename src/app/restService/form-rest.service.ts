@@ -11,7 +11,7 @@ export class FormRestService {
 
 
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    headers: new HttpHeaders({ 'Content-Type': 'application/json;' })
   };
 
   constructor(private http: HttpClient) { }

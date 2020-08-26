@@ -14,9 +14,8 @@ export class SubmitComponent implements OnInit {
   submitForm: FormGroup;
   submitted = false;
 
-  private jsonString : String;
   private postService: FormRestService
-  
+
   constructor(formService: FormRestService, private formBuilder: FormBuilder) {
     this.postService = formService;
   }
@@ -48,11 +47,14 @@ export class SubmitComponent implements OnInit {
       return;
     }
   
-    let formObj = this.submitForm.getRawValue(); // {name: '', description: ''}
+    let formObj = this.submitForm.getRawValue(); 
 
     let serializedForm = JSON.stringify(formObj);
 
-    this.postService.postItems(serializedForm);
+    let resp = this.postService.postItems(serializedForm);
+
+    alert("Pieteikums nosūtīts!");
+
   }
 
 

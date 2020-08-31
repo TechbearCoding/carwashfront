@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SubmitComponent } from './submit/submit.component';
 import { MainComponent } from './main/main.component';
 import { LoginComponent} from './login/login.component'
+import { AdminView } from './adminView/adminView.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'admin',
+    component: AdminView
   }
 ];
 

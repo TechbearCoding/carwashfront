@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../restService/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   authServ : AuthService;
 
-  constructor(authService: AuthService, private formBuilder: FormBuilder) {
+  constructor(authService: AuthService, private formBuilder: FormBuilder, private router: Router) {
     this.authServ = authService;
   }
 
@@ -31,8 +32,8 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    alert("done");
-    this.authServ.login(this.loginForm.controls['uname'].value, this.loginForm.controls['passw'].value);
+    let resp = this.authServ.login(this.loginForm.controls['uname'].value, this.loginForm.controls['passw'].value);
+    this.router.navigateByUrl('/admin');
     
   }
 

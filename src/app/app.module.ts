@@ -18,6 +18,7 @@ import { SubmitComponent } from './submit/submit.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { AdminView } from './adminView/adminView.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { LoginComponent } from './login/login.component';
     SubmitComponent,
     HeaderComponent,
     LoginComponent,
+    AdminView,
   ],
   imports: [
     BrowserModule,

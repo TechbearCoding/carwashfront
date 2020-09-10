@@ -1,14 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-
-.container{
-	  background-color: #f8f8f8;
-	  margin: 0px; padding: 0px;
-}
-
 .containerWhite{
 	background-color: #ffffff;
 	margin: 0px; padding: 0px;
 }
+
+
+.containerBaige{
+	background-color: #f8f8f8;
+	margin: 0px; padding: 0px;
+}
+
 
 .title{
 	position: relative;
@@ -43,8 +44,18 @@
 	clear: both;
 }
 
+.rowTitle{
+	text-align:center;
+}
+
+.rowTitle:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 table {
-	font-family: arial, sans-serif;
+	font-family: arial;
 	border-collapse: collapse;
 	width: 100%;
 }

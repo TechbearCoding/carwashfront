@@ -22,9 +22,10 @@
     "@angular/router": "~10.1.1",
     "@ng-bootstrap/ng-bootstrap": "^6.2.0",
     "angular-calendar": "^0.28.16",
-    "bootstrap": "^4.4.0",
+    "bootstrap": "^4.5.2",
     "date-fns": "^2.14.0",
     "ng-bootstrap": "^1.6.3",
+    "ngx-bootstrap": "^6.1.0",
     "rxjs": "~6.5.4",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

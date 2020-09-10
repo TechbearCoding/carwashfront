@@ -45,10 +45,28 @@
     </div>
     <br>
 
+    <label for="date-picker">Datums:</label><br>
+    <app-time-picker formControlName="date"></app-time-picker>
+
+
+    <label for="time">Laiks:</label><br>
+    <select name = "time" formControlName="time"><br>
+        <option value="10:00" selected>10:00</option>
+        <option value="11:00">11:00</option>
+        <option value="12:00">11:00</option>
+        <option value="13:00">11:00</option>
+        <option value="14:00">11:00</option>
+        <option value="15:00">11:00</option>
+        <option value="16:00">11:00</option>
+        <option value="17:00">11:00</option>
+        <option value="18:00">11:00</option>
+    </select><br>
+    <br>
+
     <h1>Par auto</h1>
     <label for="model">Auto modelis:</label><br>
     <input required type="text" formControlName="model"
-    [ngClass]="{ 'is-invalid': submitted && fval.model.errors }">><br>
+    [ngClass]="{ 'is-invalid': submitted && fval.model.errors }"><br>
 
     <div *ngIf="submitted && fval.model.errors" class="invalid-feedback">
         <div *ngIf="fval.model.errors.required">
@@ -77,12 +95,7 @@
     <textarea class = "commentArea" formControlName="comments"></textarea>
     <br>
 
-    <mwl-calendar-week-view></mwl-calendar-week-view>
-    <app-time-picker></app-time-picker>
-
     <input class="submitBtn" type="submit" value="Pieteikties">
-
-
 
   </form>
 

@@ -30,6 +30,8 @@ export class SubmitComponent implements OnInit {
       model: ['', Validators.required],
       service: ['Automazgāšana', Validators.required],
       quality: ['Zelta', Validators.required],
+      time: ['10:00', Validators.required],
+      date: [''],
       comments: ['']
     });
     
